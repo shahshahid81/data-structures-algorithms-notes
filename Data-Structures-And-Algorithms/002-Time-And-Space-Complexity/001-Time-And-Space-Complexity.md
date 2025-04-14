@@ -1,9 +1,3 @@
----
-title: 001-Time-And-Space-Complexity
-updated: 2024-10-01 19:56:43Z
-created: 2024-10-01 17:39:23Z
----
-
 #### Characteristics of Algorithm
 
 1. Input: Algorithm should have at least 0 or more input.
@@ -101,6 +95,12 @@ Time Complexity is `O(n)` since there is no nesting.
 ![48c218722beaeeebf2e802dfd1d9f0ee.png](../../_resources/48c218722beaeeebf2e802dfd1d9f0ee.png)
 
 First loop has time complexity of log n. The second loop is executed log of P times which is log n so time complexity of second loop is `O(log log n)` .
+
+```
+log₂(n) = how many times you divide n by 2 until you get 1  
+log₂(log₂(n)) = how many times you divide log₂(n) by 2 until you get 1
+
+```
 
 10.
 ![13ef053b0e11cc493548a38bc963907d.png](../../_resources/13ef053b0e11cc493548a38bc963907d.png)
