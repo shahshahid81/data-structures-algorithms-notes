@@ -3,15 +3,6 @@
 
 using namespace std;
 
-void print(vector<int> vec)
-{
-    for (auto it : vec)
-    {
-        cout << it << " ";
-    }
-    cout << endl;
-}
-
 int main()
 {
     // vector is implemented using arrays internally

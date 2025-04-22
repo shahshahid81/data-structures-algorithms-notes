@@ -125,35 +125,35 @@ int main()
     l0.erase(l0first, l0fourth);
 
     // 100 100
-    list<int> v3(2, 100);
+    list<int> l3(2, 100);
 
     // Adds 300 at index 0
     // 300 100 100
-    v3.insert(v3.begin(), 300);
+    l3.insert(l3.begin(), 300);
 
     // Adds 2 elements with value 10 at index 1
     // 300 10 10 100 100
-    auto v3first = std::next(v3.begin(), 1);
-    v3.insert(v3first, 2, 10);
+    auto v3first = std::next(l3.begin(), 1);
+    l3.insert(v3first, 2, 10);
 
     list<int> copy(2, 50);
-    // Copys the list copy from start to end at the first index of v3
-    // Changes in copy won't be reflected in v3 and vice versa
-    v3.insert(v3.begin(), copy.begin(), copy.end());
+    // Copys the list copy from start to end at the first index of l3
+    // Changes in copy won't be reflected in l3 and vice versa
+    l3.insert(l3.begin(), copy.begin(), copy.end());
 
-    // v3.front() = 10;
-    // cout << v3.front() << " " << copy.front() << endl; // 10 50
+    // l3.front() = 10;
+    // cout << l3.front() << " " << copy.front() << endl; // 10 50
 
-    cout << v3.size() << endl;
+    cout << l3.size() << endl;
 
     // Remove the last element, doesn't return anything
-    v3.pop_back();
+    l3.pop_back();
 
     // Swap two lists
-    l1.swap(v3);
+    l1.swap(l3);
 
     // Removes all the elements from the list
-    v3.clear();
+    l3.clear();
 
     // returns first element
     // Check for empty before calling front else undefined behaviour
