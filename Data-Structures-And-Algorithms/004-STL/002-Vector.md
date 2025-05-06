@@ -134,7 +134,6 @@ int main()
     // Copies data from v1 into v2 from the end of v2
     std::copy(v1.begin(), v1.end(), std::back_inserter(v2));
 }
-
 ```
 
 Output:

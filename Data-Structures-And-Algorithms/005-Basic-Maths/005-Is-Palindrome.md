@@ -14,7 +14,6 @@ Explanation: The reverse of number 7789 is 9877 and therefore it is not palindro
 ```
 
 Solution:
-Leetcode: https://leetcode.com/problems/palindrome-number/
 ```
 #include <bits/stdc++.h>
 
@@ -40,4 +39,32 @@ int main()
     cout << std::boolalpha << (reverse == x) << endl;
 }
 
+```
+
+Advanced Version:
+Leetcode: https://leetcode.com/problems/palindrome-number/
+```c++
+class Solution {
+  public: bool isPalindrome(int x) {
+    if (
+      // Negative numbers
+      x < 0 ||
+      // Case for numbers ending with 0
+      (x % 10 == 0 && x != 0)
+    ) {
+      return false;
+    }
+
+    int reversed_half = 0;
+    // We only reverse half number to avoid overflow and avoid unnecessary computation
+    while (x > reversed_half) {
+      // Extract the last digit and build the reversed number
+      reversed_half = reversed_half * 10 + x % 10;
+      x /= 10;
+    }
+
+    // Compare the two halves (discard the middle digit for odd-length numbers)
+    return x == reversed_half || x == reversed_half / 10;
+  }
+};
 ```

@@ -1,3 +1,76 @@
+# Modulos Operation Examples
+
+The % operator gives the remainder of integer division.
+In C++, it follows this rule:
+
+The sign of the result is the same as the dividend (left-hand side).
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 7;
+    int b = 3;
+
+    cout << "7 % 3 = " << (7 % 3) << endl;     // 1
+    cout << "-7 % 3 = " << (-7 % 3) << endl;   // -1
+    cout << "7 % -3 = " << (7 % -3) << endl;   // 1
+    cout << "-7 % -3 = " << (-7 % -3) << endl; // -1
+
+    return 0;
+}
+```
+
+✅ Why Negative?
+In -7 % 3, C++ does:
+```
+-7 / 3 = -2     --> quotient
+-7 - (-2 * 3) = -7 - (-6) = -1  --> remainder
+```
+That’s why the result is -1.
+
+🔁 Normalized Modulo (Always Positive)
+If you want the result to always be non-negative, define a helper:
+
+```c++
+int mod(int a, int b) {
+    return (a % b + b) % b;
+}
+```
+
+```c++
+#include <iostream>
+using namespace std;
+
+// Always-positive modulo
+int mod(int a, int b)
+{
+	// after a % b, the negative value is added with b to ensure it becomes positive and then again mod the value to get positive result
+    return (a % b + b) % b;
+}
+
+int main()
+{
+    int a = 7;
+    int b = 3;
+
+    cout << "Using C++ % operator:\n";
+    cout << "7 % 3 = " << (7 % 3) << endl;     // 1
+    cout << "-7 % 3 = " << (-7 % 3) << endl;   // -1
+    cout << "7 % -3 = " << (7 % -3) << endl;   // 1
+    cout << "-7 % -3 = " << (-7 % -3) << endl; // -1
+
+    cout << "\nUsing custom mod(a, b) function (always non-negative):\n";
+    cout << "mod(7, 3) = " << mod(7, 3) << endl;     // 1
+    cout << "mod(-7, 3) = " << mod(-7, 3) << endl;   // 2
+    cout << "mod(7, -3) = " << mod(7, -3) << endl;   // -2
+    cout << "mod(-7, -3) = " << mod(-7, -3) << endl; // -1
+
+    return 0;
+}
+```
+
 # Repeated Modulo 10 and Division by 10 on 12345
 
 We will apply modulo 10 (`% 10`) and division by 10 (`// 10`) repeatedly on the number `12345`.

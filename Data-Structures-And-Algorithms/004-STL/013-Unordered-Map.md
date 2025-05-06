@@ -8,6 +8,7 @@ class PairHash
 public:
     size_t operator()(const pair<int, int> &p) const
     {
+        // Note that hash<int>() is a functor, a class with overloaded() operator
         // Combine the hashes of the two elements of the pair
         size_t hash1 = hash<int>()(p.first);  // hash for the first element
         size_t hash2 = hash<int>()(p.second); // hash for the second element
@@ -33,15 +34,7 @@ int main()
     m.insert({2, 4});
     m.insert({7, 10});
 
-    // To use unordered_map with pair as key, define a custom hash function
-    struct pair_hash
-    {
-        size_t operator()(const pair<int, int> &p) const
-        {
-            return hash<int>()(p.first) ^ (hash<int>()(p.second) << 1);
-        }
-    };
-    unordered_map<pair<int, int>, int, pair_hash> mp2b;
+    unordered_map<pair<int, int>, int, PairHash> mp2b;
     mp2b[{3, 1}] = 2;
 
     cout << "Contents of unordered_map m:\n";
@@ -89,6 +82,7 @@ int main()
 
     return 0;
 }
+
 ```
 
 Output:
