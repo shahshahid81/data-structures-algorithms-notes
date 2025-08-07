@@ -7,7 +7,9 @@ Format of Notes:
 6. Dry Run of Optimal Solutions.
 7. Time and Space Complexity (Best, Worst and Average Case).
 8. Tips and Tricks learned in the problem.
-9. Update the theory section and add intuition for different techniques and data structures.
+9. Update the theory section and add intuition for different techniques and data structures. Tag the notes.
+10. Add Leetcode Problem Link.
+11. Add commonly missed edge cases in the section.
 
 Rules:
     Revision should not have more than 5 problems at a time.
