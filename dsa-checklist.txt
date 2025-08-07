@@ -1,13 +1,15 @@
 Format of Notes:
 1. Title of the problem.
-2. Examples, not too long, also try to check edge cases.
-3. Brute Force Code.
+2. Examples, not too long, also check edge cases.
+3. Brute Force Code. Try all the possible solutions in the simplest way possible.
 4. Dry Run of Brute Force.
 5. Optimal Solutions.
 6. Dry Run of Optimal Solutions.
 7. Time and Space Complexity (Best, Worst and Average Case).
 8. Tips and Tricks learned in the problem.
+9. Update the theory section and add intuition for different techniques and data structures.
 
 Rules:
     Revision should not have more than 5 problems at a time.
     Problems that couldn't be solved on own should be studied repeatedly unless the code is understood really well.
+    If failed to solve a problem within 20 minutes, understand the solution and intuition deeply and code it on own, then mark for revision.
