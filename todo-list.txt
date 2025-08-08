@@ -1,6 +1,6 @@
 Revision:
     1st Try:
-
+        Print All 22 Patterns
     2nd Try:
 
     3rd Try:

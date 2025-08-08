@@ -5,11 +5,54 @@ Format of Notes:
 4. Dry Run of Brute Force.
 5. Optimal Solutions.
 6. Dry Run of Optimal Solutions.
-7. Time and Space Complexity (Best, Worst and Average Case).
+7. Time and Space Complexity (Best, Worst and Average Case) for all approach.
 8. Tips and Tricks learned in the problem.
 9. Update the theory section and add intuition for different techniques and data structures. Tag the notes.
 10. Add Leetcode Problem Link.
 11. Add commonly missed edge cases in the section.
+
+Steps to solve the problem:
+Understand the Problem
+• Make sure you understand the problem completely.
+• Ask clarifying questions if needed.
+• Identify inputs, outputs, and edge cases.
+• Using input and constraint size, identify the time complexity of expected solution and use common algorithms for that time complexity and using output, identify the type of algorithm. https://www.youtube.com/watch?v=LAnEeffb5zI 
+
+Explain the Problem Back to the Interviewer
+• Restate the problem in your own words.
+• Confirm the goal and constraints.
+
+Come Up with Concrete Examples
+• Work through examples by hand.
+• Check normal cases, edge cases, and invalid inputs.
+
+Plan Your Approach
+• Discuss possible approaches.
+• Think about brute force first.
+• Discuss pros and cons of different methods.
+• Consider time and space complexity.
+
+Write Pseudocode or Outline the Algorithm
+• Write down the logic before coding.
+• Make sure your plan is clear and covers all steps.
+
+Implement the Solution
+• Code the solution step-by-step.
+• Keep talking through your thought process if in an interview.
+• Note: Use int for 8 digits and long long for more.
+
+Test Your Code
+• Run through your examples.
+• Test edge cases.
+• Debug any issues.
+
+Discuss Complexity and Trade-offs
+• Analyze time and space complexity.
+• Mention any potential improvements or alternative solutions.
+
+Optimize if Needed
+• Suggest improvements if your solution isn’t optimal.
+• Discuss trade-offs between clarity and performance.
 
 Rules:
     Revision should not have more than 5 problems at a time.
